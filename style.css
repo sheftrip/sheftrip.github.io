@@ -35,13 +35,14 @@ header{
 }
 .projects{
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    /* margin-top: 7rem;  */
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 h3{
+    font-family: 'Poppins', sans-serif;
     color: rgb(5, 184, 184);
     font-size: 1.75rem;
     text-align: center;
@@ -63,6 +64,7 @@ h3{
 .download-button{
     /* position: relative; */
     border: none;
+    outline: none;
     border-radius: 12px;
     color: whitesmoke;
     padding: 1rem;
@@ -70,6 +72,7 @@ h3{
     margin-left: 7.5rem;
     font-size: 1.5rem;
     background-color: rgb(5, 184, 184);
+    transition: all 0.3s ease;
 }
 
 .download-button:hover{
@@ -120,4 +123,35 @@ img{
 .fa-github,
 .fa-linkedin-in{
     pointer-events: none;
+}
+
+.fa-calendar-alt{
+    font-size: 1.25rem;
+    color: black;
+}
+
+.fa-link{
+    font-size: 1.25rem;
+    margin-top: 0.2rem;
+    color: black;
+}
+
+h4{
+    color:black;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    text-decoration: underline;
+}
+
+.project-item{
+    outline: none;
+    color: rgb(119, 117, 117);
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    width: 25rem;
+    height:35rem;
+    margin: 3rem;
+    padding: 2rem;
+    text-align: left;
 }
