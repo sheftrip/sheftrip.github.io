@@ -1,157 +1,126 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    background: whitesmoke;
+    font-size: 18px;
 }
 
-body{
-    background-color: whitesmoke;
-    display: grid;
+h1 {
+    font-size: 3.5em;
+    font-weight: 200;
+    /* margin: 0.4em 0; */
+    
+}
+h2{
+    color:#00818a;
+    margin-bottom: 1rem;
 }
 
-header{
-    font-size: 1.5rem;
-    font-family: 'Sacramento', cursive;
-    border-style: hidden;
-    background-color: #eb6e80;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.info{
-    display: block;
-}
-.about{
-    font-family: 'Poppins', sans-serif;
-    display: block;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+/* Landing Page */
+
+.landing-page{
     text-align: center;
-    margin-top: 3rem; 
-    margin-right: 3rem;
-    margin-left: 20rem;
-}
-.projects{
-    font-family: 'Poppins', sans-serif;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-h3{
-    font-family: 'Poppins', sans-serif;
-    color: rgb(5, 184, 184);
-    font-size: 1.75rem;
-    text-align: center;
-    /* margin-top: 3rem; */
+    background: #222;
+    color: #aaa;
+    padding: 7rem 0;
 }
 
-.img-button{
-    outline: none;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    display: block;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    margin-top: 2rem;
+.resume-btn{
+    margin: 5rem 0 0 0;
+    color: #222;
+    background-color: #00adb5;
+    -webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+    
 }
 
-.download-button{
-    /* position: relative; */
-    border: none;
-    outline: none;
-    border-radius: 12px;
-    color: whitesmoke;
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-left: 7.5rem;
-    font-size: 1.5rem;
-    background-color: rgb(5, 184, 184);
-    transition: all 0.3s ease;
+.resume-btn:hover, .resume-btn:active, .resume-btn:focus{
+    color:#222;
+    background-color:#00acb5c0;
 }
 
-.download-button:hover{
-   box-shadow: 5px 5px darkgray;
-}
-
-img{
-    border-radius: 50%;
-    width: 23rem;
-}
-
-.git-btn{
+.social-btn{
     outline: none;
     border: 4px solid;
-    border-color: #e9b000;
+    border-color: #00adb5;
     border-radius: 50%;
-    color: #e9b000;
-    background: whitesmoke;
+    color: #00adb5;
+    background: #222;
     font-size: 2.5rem;
-    padding: 0.55rem;
-    margin-left: 0.5rem;
+    padding: 0.55rem 0,6rem;
     transition: all 0.3s ease;
+    margin-top: 3rem;
+    -webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.git-btn{
+    margin-left: 1.5rem;
 }
 
 .linkedin-btn{
-    outline: none;
-    border: 4px solid;
-    border-color: #e9b000;
-    color: #e9b000;
-    background: whitesmoke;
-    font-size: 2.5rem;
-    border-radius: 50%;
-    padding:0.55rem;
-    margin-right: 0.5rem;
-    transition: all 0.3s ease;
+    margin-right: 1.5rem;
+   
 }
 
-.git-btn:hover{
-    color:whitesmoke;
-    background-color:#e9b000;
+.social-btn:hover{
+    color:#222;
+    background-color:#00adb5;
 }
 
-.linkedin-btn:hover{
-    color:whitesmoke;
-    background-color:#e9b000;
-}
 
 .fa-github,
 .fa-linkedin-in{
     pointer-events: none;
 }
 
-.fa-calendar-alt{
-    font-size: 1.25rem;
-    color: black;
+.section{
+    margin:100px auto 100px auto; 
+    text-align: left;
+    width: 75%;
+    line-height: 2;
 }
 
-.fa-link{
-    font-size: 1.25rem;
-    margin-top: 0.2rem;
-    color: black;
+/* About */
+
+.profile-img{
+    width: 20%;
+    float: left;
+    margin: 0px 20px 0px 0px;
+    position: relative;
 }
 
-h4{
-    color:black;
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-    text-decoration: underline;
+.contact{
+    text-align: center;
+    line-height: 1;
 }
 
-.project-item{
-    outline: none;
-    color: rgb(119, 117, 117);
-    background-color: white;
+h5, .contact-head{
+    color: #00adb5;
+}
+
+/* Projects */
+.projects{
+    margin:100px auto 100px auto; 
+    text-align: left;
+    width: 75%;
+    line-height: 2;
+}
+
+.card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 12px;
-    width: 25rem;
-    height:35rem;
-    margin: 3rem;
-    padding: 2rem;
-    text-align: left;
+    height: 35rem;
+    margin: 1rem 0;
+}
+/* Footer */
+
+footer{
+    text-align: center;
+    padding: 0.5rem 0;
+    background: #222;
+    color: #aaa;
 }
