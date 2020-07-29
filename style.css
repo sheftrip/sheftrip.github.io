@@ -124,3 +124,7 @@ footer{
     background: #222;
     color: #aaa;
 }
+.footer-link{
+    color: #aaa;
+    margin-bottom: 1rem;
+}
