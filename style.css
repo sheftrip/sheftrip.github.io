@@ -1,130 +1,254 @@
-html,
-body {
-    font-family: 'Raleway', sans-serif;
-    background: whitesmoke;
-    font-size: 18px;
+:root {
+    --primary-color: #00adb5;
+    --secondary-color: #00818a;
+    --dark-color: #222;
+    --light-color: #aaa;
+    --background-color: #f8f9fa;
+    --transition-speed: 0.3s;
 }
 
-h1 {
-    font-size: 3.5em;
-    font-weight: 200;
-    /* margin: 0.4em 0; */
-    
+html {
+    scroll-behavior: smooth;
 }
-h2{
-    color:#00818a;
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--background-color);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Typography */
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 200;
     margin-bottom: 1rem;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+/* Navigation */
+.navbar {
+    transition: background-color var(--transition-speed);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    transition: color var(--transition-speed);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
 }
 
 /* Landing Page */
-
-.landing-page{
+.landing-page {
     text-align: center;
-    background: #222;
-    color: #aaa;
-    padding: 7rem 0;
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 8rem 0 5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.resume-btn{
-    margin: 5rem 0 0 0;
-    color: #222;
-    background-color: #00adb5;
-    -webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
-	user-select:none;
-    
+.resume-btn {
+    margin: 3rem 0;
+    color: var(--dark-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    transition: all var(--transition-speed);
+    text-decoration: none;
 }
 
-.resume-btn:hover, .resume-btn:active, .resume-btn:focus{
-    color:#222;
-    background-color:#00acb5c0;
+.resume-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.social-btn{
-    outline: none;
-    border: 4px solid;
-    border-color: #00adb5;
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 3px solid var(--primary-color);
     border-radius: 50%;
-    color: #00adb5;
-    background: #222;
-    font-size: 2.5rem;
-    padding: 0.55rem 0,6rem;
-    transition: all 0.3s ease;
-    margin-top: 3rem;
-    -webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
-	user-select:none;
-}
-.git-btn{
-    margin-left: 1.5rem;
+    color: var(--primary-color);
+    background: transparent;
+    font-size: 1.5rem;
+    transition: all var(--transition-speed);
+    text-decoration: none;
+    margin: 0 1rem;
 }
 
-.linkedin-btn{
-    margin-right: 1.5rem;
-   
+.social-btn:hover {
+    color: var(--dark-color);
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
-.social-btn:hover{
-    color:#222;
-    background-color:#00adb5;
-}
-
-
-.fa-github,
-.fa-linkedin-in{
-    pointer-events: none;
-}
-
-.section{
-    margin:100px auto 100px auto; 
-    text-align: left;
-    width: 75%;
-    line-height: 2;
+/* Sections */
+.section {
+    padding: 5rem 0;
 }
 
 /* About */
-
-.profile-img{
-    width: 20%;
-    float: left;
-    margin: 0px 20px 0px 0px;
-    position: relative;
+.profile-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed);
 }
 
-.contact{
+.profile-img:hover {
+    transform: scale(1.02);
+}
+
+.contact {
     text-align: center;
-    line-height: 1;
+    margin-top: 3rem;
 }
 
-h5, .contact-head{
-    color: #00adb5;
+.contact-head {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.contact a:hover {
+    color: var(--primary-color);
 }
 
 /* Projects */
-.projects{
-    margin:100px auto 100px auto; 
-    text-align: left;
-    width: 75%;
-    line-height: 2;
+.projects {
+    padding: 5rem 0;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    min-height: 35rem;
-    margin: 1rem 0;
+    border: none;
+    transition: transform var(--transition-speed);
+    height: 100%;
 }
-/* Footer */
 
-footer{
-    text-align: center;
-    padding: 0.5rem 0;
-    background: #222;
-    color: #aaa;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.footer-link{
-    color: #aaa;
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.card-subtitle {
+    margin-bottom: 1rem;
+}
+
+.card-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.card-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 1.5rem 0;
+}
+
+.footer-link {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section, .card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .profile-img {
+        margin-bottom: 2rem;
+    }
+    
+    .card {
+        margin-bottom: 2rem;
+    }
+    
+    .social-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar, .social-links, .resume-btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section, .projects {
+        margin: 0;
+        padding: 1rem 0;
+    }
 }
