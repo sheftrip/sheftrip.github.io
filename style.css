@@ -125,14 +125,43 @@ h2 {
     transform: scale(1.02);
 }
 
+/* Email Buttons */
+.email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.email-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--dark-color);
+}
+
+.email-btn i {
+    font-size: 1.1rem;
+}
+
+/* Update contact section spacing */
 .contact {
     text-align: center;
     margin-top: 3rem;
+    padding: 2rem 0;
 }
 
 .contact-head {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .contact a {
